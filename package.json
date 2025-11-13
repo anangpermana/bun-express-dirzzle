@@ -1,0 +1,36 @@
+{
+  "name": "my-api",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun run src/server.ts",
+    "build": "bun build ./src/server.ts --outdir ./dist --target bun",
+    "start": "bun run dist/server.js",
+    "migrate": "bunx drizzle-kit push",
+    "generate": "bunx drizzle-kit generate"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/bun": "latest",
+    "@types/compression": "^1.8.1",
+    "@types/express": "^5.0.5",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/pg": "^8.15.6",
+    "drizzle-kit": "^0.31.6"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "compression": "^1.8.1",
+    "drizzle-orm": "^0.44.7",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.16.3",
+    "pino": "^10.1.0",
+    "pino-pretty": "^13.1.2"
+  }
+}
