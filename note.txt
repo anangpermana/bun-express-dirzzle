@@ -1,5 +1,11 @@
 #bunx drizzle-kit introspect
 digunakan untuk reverse engineering (membuat scheme dari table yang sudah ada)
 
+#bunx drizzle-kit generate
+generate migration
+
+#bunx drizzle-kit migration
+apply ke db
+
 ref
 https://chatgpt.com/c/6915424c-3460-8324-9bc4-987190ac2760

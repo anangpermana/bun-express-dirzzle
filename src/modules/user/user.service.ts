@@ -22,7 +22,11 @@ export class UserService {
     if (!isValid) throw new Error("Invalid credentials");
 
     const token = generateToken({ id: user.id, email: user.email });
-    return { user, token };
+    return { user:{
+      id: user.id,
+      name: user.name,
+      email: user.email
+    }, token };
   }
 
   static async getProfile(id: number) {
